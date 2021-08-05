@@ -1,9 +1,13 @@
-import { ThemeProvider, makeStyles, createTheme } from '@material-ui/core/styles';
+import {
+  ThemeProvider,
+  makeStyles,
+  createTheme,
+} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React, { useState, useEffect, useMemo } from 'react';
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import MyAppBar from '../components/Layout/MyAppbar';
 
@@ -26,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function MyApp({ Component, pageProps }) {
   const classes = useStyles();
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   useEffect(() => {

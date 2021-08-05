@@ -1,16 +1,20 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
 import BallotOutlinedIcon from '@material-ui/icons/BallotOutlined'; // monitoring
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import MapOutlinedIcon from '@material-ui/icons/MapOutlined'; // structure
+import React from 'react';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp'; // charts
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   heroSectionRoot: {
     minHeight: '100vh',
+    backgroundColor:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.defaultDarkBackground
+        : theme.palette.common.defaultLightBackground,
   },
   heroTitle: {
     marginBottom: theme.spacing(4),
@@ -34,8 +38,8 @@ const useStyles = makeStyles(theme => ({
 function About() {
   const classes = useStyles();
   return (
-
     <Grid
+      id="about"
       className={classes.heroSectionRoot}
       container
       direction="column"

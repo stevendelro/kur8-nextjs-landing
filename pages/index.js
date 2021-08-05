@@ -1,18 +1,31 @@
-import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import React from 'react';
 
-import Hero from '../components/Sections/Hero';
 import About from '../components/Sections/About';
 import Demos from '../components/Sections/Demos';
-// import GetStarted from '../components/Sections/GetStarted';
+import Footer from '../components/Sections/Footer';
+import Hero from '../components/Sections/Hero';
+import Team from '../components/Sections/Team';
+
+const useStyles = makeStyles(theme => ({
+  topLevelContainer: {
+    backgroundColor:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.defaultDarkBackground
+        : theme.palette.common.defaultLightBackground,
+  },
+}));
 
 export default function Index() {
+  const classes = useStyles();
   return (
-    <Container maxWidth= 'xl'>
+    <Container className={classes.topLevelContainer} maxWidth="xl">
       <Hero />
       <About />
       <Demos />
-      {/* <GetStarted /> */}
+      <Team />
+      <Footer />
     </Container>
   );
 }

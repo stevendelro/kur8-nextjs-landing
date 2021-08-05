@@ -14,13 +14,25 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(3),
-      width: '100%'
+      width: '100%',
     },
     '&:last-child': {
       marginBottom: 0,
     },
   },
-  textVideoBlock__story: {
+  textVideoBlock__title: {
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(6),
+    },
+    [theme.breakpoints.only('md')]: {
+      padding: theme.spacing(4),
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2, 3),
+      marginBottom: theme.spacing(10),
+    },
+  },
+  textVideoBlock__text: {
     [theme.breakpoints.up('lg')]: {
       padding: theme.spacing(6),
     },
@@ -47,6 +59,7 @@ export default function TextVideoBlock({
   videoPath,
   imagePath,
   text,
+  title,
   videoSide = 'right',
 }) {
   const classes = useStyles();
@@ -57,10 +70,18 @@ export default function TextVideoBlock({
     return (
       <Grid item sm={12} md={5}>
         <Typography
+          className={classes.textVideoBlock__title}
+          component="p"
+          variant="h3"
+          color="textSecondary"
+          align={isSmallScreen ? 'left' : videoSide}>
+          {title}
+        </Typography>
+        <Typography
           component="p"
           variant="h5"
           color="textSecondary"
-          className={classes.textVideoBlock__story}
+          className={classes.textVideoBlock__text}
           align={isSmallScreen ? 'left' : videoSide}
           paragraph>
           {text}
@@ -126,7 +147,7 @@ export default function TextVideoBlock({
     <Grid
       container
       className={classes.textVideoBlock__ROOT}
-      direction={isSmallScreen ? 'column' : "row" }
+      direction={isSmallScreen ? 'column' : 'row'}
       justifyContent="center"
       alignItems="center">
       {composedArrangement}
