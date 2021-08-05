@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function MyApp({ Component, pageProps }) {
   const classes = useStyles();
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   useEffect(() => {
