@@ -18,7 +18,7 @@ function Hero() {
   const classes = useStyles();
   let renderedLogo;
   if (theme.palette.type === 'dark') {
-    renderedLogo = 'https://lineemen.sirv.com/Images/kur8-logo-grey.jpg';
+    renderedLogo = 'https://lineemen.sirv.com/Images/kur8-logo-grey.png';
   } else {
     renderedLogo = 'https://lineemen.sirv.com/Images/kur8-logo-white.png';
   }
@@ -28,7 +28,8 @@ function Hero() {
       container
       direction="column"
       justifyContent="center"
-      alignItems="center">
+      alignItems="center"
+    >
       <img src={renderedLogo} width="693" height="417" alt="" />
       <Typography variant="h4" component="h1">
         A visual overview of Kubernetes architecture and Prometheus metrics
