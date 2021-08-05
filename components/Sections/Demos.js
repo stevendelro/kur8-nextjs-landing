@@ -1,22 +1,37 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import React from 'react';
+
 import TextVideoBlock from '../TextVideoBlock';
 
 const useStyles = makeStyles(theme => ({
   textVideoBlockContainer: {
+    backgroundColor:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.defaultDarkBackground
+        : theme.palette.common.defaultLightBackground,
     paddingBottom: theme.spacing(20),
+    '&:last-child': {
+      paddingBottom: theme.spacing(5),
+    },
     [theme.breakpoints.down('xs')]: {
       paddingBottom: theme.spacing(5),
     },
   },
 }));
 
+const titleArr = [
+  'Structure Page',
+  'Metrics Page',
+  'Custom Metrics',
+  'Alerts Page',
+];
+
 const textArr = [
   'Navigate through the structures page to easily see your control planes and worker nodes with all their pods inside. Click on the components to see more details about its metadata, status, and specifications. Easily find information regarding the image IDs or IP addresses of anything from containers to ingresses.',
-  'Get the state of your cluster at a glance with our curated metrics dashboard.',
-  'Use our custom metrics page to use our PromQL autocomplete feature to query any metrics you want.',
-  'All of your Prometheus alerts including your custom ones are displayed here in the Alerts tab. Find out if any alerts are firing and which rule groups they fall under.',
+  'Review relevant metrics such as the number of pods in each namespace, which pods have gone down, CPU and memory usage by both container and pod—all in gauge, histogram, and line chart form.',
+  "Create custom charts and graphs with KUR8's PromQL autocomplete search bar for intuitive custom metrics querying within varied time ranges and step intervals.",
+  'Observe all Prometheus alert information like name, health, state, evaluation time, severity, labels, and summaries. Quickly discover which alerts are currently firing and which group they fall under.',
 ];
 
 const imagePaths = [
@@ -36,7 +51,7 @@ function Videos() {
   const classes = useStyles();
   return (
     <div>
-      <Container className={classes.textVideoBlockContainer} maxWidth='xl'>
+      <Container className={classes.textVideoBlockContainer} maxWidth="xl">
         {videoPaths.map((videoPath, index) => {
           return (
             <TextVideoBlock
@@ -44,6 +59,7 @@ function Videos() {
               videoPath={videoPath}
               imagePath={imagePaths[index]}
               text={textArr[index]}
+              title={titleArr[index]}
               videoSide={index % 2 === 0 ? 'left' : 'right'}
             />
           );
