@@ -77,12 +77,14 @@ export default function MyAppBar(props) {
               container
               direction="row"
               justifyContent="flex-start"
-              alignItems="center">
+              alignItems="center"
+            >
               <Typography variant="h6">
                 <Link
                   href="#about"
                   className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}>
+                  onClick={e => e.preventDefault}
+                >
                   ABOUT
                 </Link>
               </Typography>
@@ -90,20 +92,28 @@ export default function MyAppBar(props) {
                 <Link
                   href="#team"
                   className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}>
+                  onClick={e => e.preventDefault}
+                >
                   TEAM
                 </Link>
               </Typography>
+            </Grid>
+            <Grid
+              container
+              direction="row"
+              justifyContent="flex-start"
+              alignItems="center"
+            >
               <Typography variant="h6">
                 <Link
                   href="https://github.com/oslabs-beta/KUR8"
                   className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}>
+                  onClick={e => e.preventDefault}
+                >
                   GITHUB
                 </Link>
               </Typography>
             </Grid>
-
             <FormGroup>
               <FormControlLabel
                 className={classes.darkModeSwitchContainer}

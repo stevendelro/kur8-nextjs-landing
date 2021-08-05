@@ -44,16 +44,18 @@ function About() {
       container
       direction="column"
       justifyContent="center"
-      alignItems="center">
+      alignItems="center"
+    >
       <Container className={classes.whatIsContainer} maxWidth="sm">
         <Typography className={classes.heroTitle} variant="h2" align="center">
           What is KUR8
         </Typography>
         <Typography variant="h5" align="center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsam
-          nesciunt accusamus eius architecto atque sint tempore veritatis
-          molestiae nihil deleniti beatae, voluptates repudiandae optio. A nihil
-          ratione incidunt ducimus.
+          KUR8 is a visual overview of Kubernetes architecture and Prometheus
+          metrics. Deploy directly into your Kubernetes cluster with one config
+          file along with another set of permissions using RBAC authorization.
+          KUR8 will spin up locally allowing you to monitor you Kubernetes
+          cluster at a glance.
         </Typography>
       </Container>
       <Grid
@@ -61,36 +63,16 @@ function About() {
         container
         direction="row"
         justifyContent="center"
-        alignItems="center">
+        alignItems="center"
+      >
         <Box sm={12} md={4}>
           <Grid
             className={classes.keyPoint}
             container
             direction="column"
             justifyContent="center"
-            alignItems="center">
-            <BallotOutlinedIcon
-              className={classes.keyPointIcon}
-              style={{ fontSize: 70 }}
-            />
-            <Typography className={classes.keyPointTitle} variant="h6">
-              Monitoring
-            </Typography>
-            <Typography className={classes.keyPointText} align="center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-              ipsam nesciunt accusamus eius architecto atque sint tempore
-              veritatis molestiae nihil deleniti beatae, voluptates repudiandae
-              optio. A nihil ratione incidunt ducimus.
-            </Typography>
-          </Grid>
-        </Box>
-        <Box sm={12} md={4}>
-          <Grid
-            className={classes.keyPoint}
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center">
+            alignItems="center"
+          >
             <MapOutlinedIcon
               className={classes.keyPointIcon}
               style={{ fontSize: 70 }}
@@ -99,10 +81,10 @@ function About() {
               Topology
             </Typography>
             <Typography className={classes.keyPointText} align="center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-              ipsam nesciunt accusamus eius architecto atque sint tempore
-              veritatis molestiae nihil deleniti beatae, voluptates repudiandae
-              optio. A nihil ratione incidunt ducimus.
+              Depending on how your cluster is orchestrated, the structure page
+              will render different configurations of master nodes and worker
+              nodes. KUR8 will allow developers to quickly get an intuitive
+              sense of the topology and architecture of the Kubernetes cluster.
             </Typography>
           </Grid>
         </Box>
@@ -112,7 +94,8 @@ function About() {
             container
             direction="column"
             justifyContent="center"
-            alignItems="center">
+            alignItems="center"
+          >
             <TrendingUpIcon
               className={classes.keyPointIcon}
               style={{ fontSize: 70 }}
@@ -121,10 +104,33 @@ function About() {
               Charts
             </Typography>
             <Typography className={classes.keyPointText} align="center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
-              ipsam nesciunt accusamus eius architecto atque sint tempore
-              veritatis molestiae nihil deleniti beatae, voluptates repudiandae
-              optio. A nihil ratione incidunt ducimus.
+              Quickly scan our charts to gather relevant metrics for Kubernetes
+              monitoring to instantly get a sense of the current state of your
+              cluster. Easy PROMQL autocomplete querying will guide you to build
+              your own custom metrics page.
+            </Typography>
+          </Grid>
+        </Box>
+        <Box sm={12} md={4}>
+          <Grid
+            className={classes.keyPoint}
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <BallotOutlinedIcon
+              className={classes.keyPointIcon}
+              style={{ fontSize: 70 }}
+            />
+            <Typography className={classes.keyPointTitle} variant="h6">
+              Monitoring
+            </Typography>
+            <Typography className={classes.keyPointText} align="center">
+              Always stay in the loop with all prometheus alerts including the
+              custom ones right in your dashboard. KUR8 will reveal any alerts
+              that are firing and which rule group they fall including their
+              severity, labels, and summaries regarding each active alert.
             </Typography>
           </Grid>
         </Box>
