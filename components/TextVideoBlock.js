@@ -21,6 +21,10 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textVideoBlock__title: {
+    color:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.white
+        : theme.palette.grey[800],
     [theme.breakpoints.up('lg')]: {
       padding: theme.spacing(6),
     },
@@ -28,11 +32,16 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(4),
     },
     [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
       padding: theme.spacing(2, 3),
-      marginBottom: theme.spacing(10),
+      marginBottom: theme.spacing(3),
     },
   },
   textVideoBlock__text: {
+    color:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.white
+        : theme.palette.grey[800],
     [theme.breakpoints.up('lg')]: {
       padding: theme.spacing(6),
     },
@@ -40,8 +49,8 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(4),
     },
     [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
       padding: theme.spacing(2, 3),
-      marginBottom: theme.spacing(10),
     },
   },
   textVideoBlock__image: {

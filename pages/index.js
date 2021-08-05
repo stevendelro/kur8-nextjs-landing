@@ -5,7 +5,7 @@ import React from 'react';
 import About from '../components/Sections/About';
 import Demos from '../components/Sections/Demos';
 import Footer from '../components/Sections/Footer';
-import Hero from '../components/Sections/Hero';
+import Logo from '../components/Sections/Logo';
 import Team from '../components/Sections/Team';
 
 const useStyles = makeStyles(theme => ({
@@ -21,7 +21,7 @@ export default function Index() {
   const classes = useStyles();
   return (
     <Container className={classes.topLevelContainer} maxWidth="xl">
-      <Hero />
+      <Logo />
       <About />
       <Demos />
       <Team />

@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import React from 'react';
@@ -23,7 +24,16 @@ const useStyles = makeStyles(theme => ({
     color:
       theme.palette.type === 'dark'
         ? theme.palette.common.white
-        : theme.palette.common.black,
+        : theme.palette.grey[800],
+  },
+  githubIcon: {
+    display: 'flex',
+    marginRight: theme.spacing(2),
+    padding: '2px',
+    color:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.white
+        : theme.palette.grey[800],
   },
 }));
 
@@ -77,14 +87,12 @@ export default function MyAppBar(props) {
               container
               direction="row"
               justifyContent="flex-start"
-              alignItems="center"
-            >
+              alignItems="center">
               <Typography variant="h6">
                 <Link
                   href="#about"
                   className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}
-                >
+                  onClick={e => e.preventDefault}>
                   ABOUT
                 </Link>
               </Typography>
@@ -92,8 +100,7 @@ export default function MyAppBar(props) {
                 <Link
                   href="#team"
                   className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}
-                >
+                  onClick={e => e.preventDefault}>
                   TEAM
                 </Link>
               </Typography>
@@ -101,18 +108,14 @@ export default function MyAppBar(props) {
             <Grid
               container
               direction="row"
-              justifyContent="flex-start"
-              alignItems="center"
-            >
-              <Typography variant="h6">
-                <Link
-                  href="https://github.com/oslabs-beta/KUR8"
-                  className={classes.appbarLinks}
-                  onClick={e => e.preventDefault}
-                >
-                  GITHUB
-                </Link>
-              </Typography>
+              justifyContent="flex-end"
+              alignItems="center">
+              <Link
+                href="https://github.com/oslabs-beta/KUR8"
+                className={classes.githubIcon}
+                onClick={e => e.preventDefault}>
+                <GitHubIcon />
+              </Link>
             </Grid>
             <FormGroup>
               <FormControlLabel
@@ -120,7 +123,6 @@ export default function MyAppBar(props) {
                 control={
                   <StyledSwitch
                     id="themetouglebutton"
-                    // className={classes.darkModeSwitch}
                     checked={darkMode}
                     onChange={toggleDarkMode}
                   />

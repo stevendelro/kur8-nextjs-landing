@@ -14,9 +14,12 @@ const useStyles = makeStyles(theme => ({
     '&:last-child': {
       paddingBottom: theme.spacing(5),
     },
-    [theme.breakpoints.down('xs')]: {
-      paddingBottom: theme.spacing(5),
+    [theme.breakpoints.down('sm')]: {
+      '&:last-child': {
+        paddingBottom: theme.spacing(30),
+      },
     },
+
   },
 }));
 

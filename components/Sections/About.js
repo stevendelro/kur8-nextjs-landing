@@ -11,6 +11,13 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   heroSectionRoot: {
     minHeight: '100vh',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(15),
+    },
+    color:
+      theme.palette.type === 'dark'
+        ? theme.palette.common.white
+        : theme.palette.grey[800],
     backgroundColor:
       theme.palette.type === 'dark'
         ? theme.palette.common.defaultDarkBackground
@@ -19,12 +26,18 @@ const useStyles = makeStyles(theme => ({
   heroTitle: {
     marginBottom: theme.spacing(4),
   },
+  description: {
+    width: '500px',
+  },
   whatIsContainer: {
-    marginBottom: theme.spacing(6),
+    marginBottom: theme.spacing(7),
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(20),
+    },
   },
   keyPoint: {
     width: '300px',
-    margin: theme.spacing(0, 3),
+    margin: theme.spacing(0, 6),
   },
   keyPointIcon: {
     margin: theme.spacing(2, 0),
@@ -32,7 +45,9 @@ const useStyles = makeStyles(theme => ({
   keyPointTitle: {
     marginBottom: theme.spacing(2),
   },
-  keyPointText: {},
+  keyPointText: {
+    fontSize: theme.typography.pxToRem(20)
+  }
 }));
 
 function About() {
@@ -44,9 +59,8 @@ function About() {
       container
       direction="column"
       justifyContent="center"
-      alignItems="center"
-    >
-      <Container className={classes.whatIsContainer} maxWidth="sm">
+      alignItems="center">
+      <Container className={classes.whatIsContainer} maxWidth="md">
         <Typography className={classes.heroTitle} variant="h2" align="center">
           What is KUR8
         </Typography>
@@ -63,24 +77,22 @@ function About() {
         container
         direction="row"
         justifyContent="center"
-        alignItems="center"
-      >
+        alignItems="center">
         <Box sm={12} md={4}>
           <Grid
             className={classes.keyPoint}
             container
             direction="column"
             justifyContent="center"
-            alignItems="center"
-          >
+            alignItems="center">
             <MapOutlinedIcon
               className={classes.keyPointIcon}
-              style={{ fontSize: 70 }}
+              style={{ fontSize: 100 }}
             />
-            <Typography className={classes.keyPointTitle} variant="h6">
+            <Typography className={classes.keyPointTitle} variant="h4">
               Topology
             </Typography>
-            <Typography className={classes.keyPointText} align="center">
+            <Typography className={classes.keyPointText} variant='h5' align="center">
               Depending on how your cluster is orchestrated, the structure page
               will render different configurations of master nodes and worker
               nodes. KUR8 will allow developers to quickly get an intuitive
@@ -94,16 +106,15 @@ function About() {
             container
             direction="column"
             justifyContent="center"
-            alignItems="center"
-          >
+            alignItems="center">
             <TrendingUpIcon
               className={classes.keyPointIcon}
-              style={{ fontSize: 70 }}
+              style={{ fontSize: 100 }}
             />
-            <Typography className={classes.keyPointTitle} variant="h6">
+            <Typography className={classes.keyPointTitle} variant="h4">
               Charts
             </Typography>
-            <Typography className={classes.keyPointText} align="center">
+            <Typography className={classes.keyPointText} variant='h5' align="center">
               Quickly scan our charts to gather relevant metrics for Kubernetes
               monitoring to instantly get a sense of the current state of your
               cluster. Easy PROMQL autocomplete querying will guide you to build
@@ -117,17 +128,16 @@ function About() {
             container
             direction="column"
             justifyContent="center"
-            alignItems="center"
-          >
+            alignItems="center">
             <BallotOutlinedIcon
               className={classes.keyPointIcon}
-              style={{ fontSize: 70 }}
+              style={{ fontSize: 100 }}
             />
-            <Typography className={classes.keyPointTitle} variant="h6">
+            <Typography className={classes.keyPointTitle} variant="h4">
               Monitoring
             </Typography>
-            <Typography className={classes.keyPointText} align="center">
-              Always stay in the loop with all prometheus alerts including the
+            <Typography className={classes.keyPointText} variant='h5' align="center">
+              Always stay in the loop with all Prometheus alerts including the
               custom ones right in your dashboard. KUR8 will reveal any alerts
               that are firing and which rule group they fall including their
               severity, labels, and summaries regarding each active alert.
