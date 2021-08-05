@@ -104,6 +104,14 @@ export default function MyAppBar(props) {
                   TEAM
                 </Link>
               </Typography>
+              <Typography variant="h6">
+                <Link
+                  href="https://medium.com/@ivkookie9/kur8-start-visualizing-your-clusters-topology-and-metrics-b5ca89452584"
+                  className={classes.appbarLinks}
+                  onClick={e => e.preventDefault}>
+                  MEDIUM
+                </Link>
+              </Typography>
             </Grid>
             <Grid
               container
