@@ -10,9 +10,9 @@ const useStyles = makeStyles(theme => ({
   heroSectionRoot: {
     minHeight: '100vh',
     color:
-    theme.palette.type === 'dark'
-      ? theme.palette.common.white
-      : theme.palette.grey[800],
+      theme.palette.type === 'dark'
+        ? theme.palette.common.white
+        : theme.palette.grey[800],
     backgroundColor:
       theme.palette.type === 'dark'
         ? theme.palette.common.defaultDarkBackground
@@ -25,13 +25,13 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(6),
   },
   subtitle: {
-    marginBottom: theme.spacing(9)
+    marginBottom: theme.spacing(9),
   },
   teamMember: {
     width: '300px',
     margin: theme.spacing(0, 6),
     [theme.breakpoints.down('sm')]: {
-        paddingBottom: theme.spacing(10),
+      paddingBottom: theme.spacing(10),
     },
   },
   teammateName: {
@@ -121,7 +121,7 @@ function About() {
               </Box>
               <Box
                 onClick={() =>
-                  (window.location.href = `https://github.com/jimmycngo`)
+                  (window.location.href = `https://github.com/stevendelro`)
                 }
                 className={classes.footer__socials}>
                 GITHUB
@@ -201,14 +201,14 @@ function About() {
               alignItems="center">
               <Box
                 onClick={() =>
-                  (window.location.href = `'https://www.linkedin.com/in/jimmycngo/'`)
+                  (window.location.href = `https://www.linkedin.com/in/jimmycngo/`)
                 }
                 className={classes.footer__socials}>
                 LINKEDIN
               </Box>
               <Box
                 onClick={() =>
-                  (window.location.href = `https://github.com/stevendelro`)
+                  (window.location.href = `https://github.com/jimmycngo`)
                 }
                 className={classes.footer__socials}>
                 GITHUB
