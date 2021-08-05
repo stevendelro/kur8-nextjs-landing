@@ -68,7 +68,7 @@ function About() {
           KUR8 is a visual overview of Kubernetes architecture and Prometheus
           metrics. Deploy directly into your Kubernetes cluster with one config
           file along with another set of permissions using RBAC authorization.
-          KUR8 will spin up locally allowing you to monitor you Kubernetes
+          KUR8 will spin up locally allowing you to monitor your Kubernetes
           cluster at a glance.
         </Typography>
       </Container>
