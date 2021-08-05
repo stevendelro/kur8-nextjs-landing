@@ -35,7 +35,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   teammateName: {
-    margin: theme.spacing(2, 0),
+    fontWeight: '500',
+    margin: theme.spacing(2, 0, 0),
+  },
+  teammateTitle: {
+    fontWeight: '400',
+    margin: theme.spacing(2, 0, 0),
   },
   teammateImg: {
     borderRadius: '10px',
@@ -43,6 +48,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer__socials: {
     padding: theme.spacing(0, 1),
+    margin: theme.spacing(0, 0, 7),
     transition: 'all .2s ease-in-out',
     '&:hover': {
       cursor: 'pointer',
@@ -95,8 +101,11 @@ function About() {
               image="https://lineemen.sirv.com/Images/steven.jpg"
               title="Steven Del Rosario"
             />
-            <Typography className={classes.teammateName} variant="h6">
+            <Typography className={classes.teammateName} variant="h5">
               Steven Del Rosario
+            </Typography>
+            <Typography className={classes.teammateTitle} variant="h6">
+              SOFTWARE ENGINEER
             </Typography>
             <Grid
               container
@@ -135,8 +144,11 @@ function About() {
               image="https://lineemen.sirv.com/Images/ivy.JPG"
               title="Ivy Yu"
             />
-            <Typography className={classes.teammateName} variant="h6">
+            <Typography className={classes.teammateName} variant="h5">
               Ivy Yu
+            </Typography>
+            <Typography className={classes.teammateTitle} variant="h6">
+              SOFTWARE ENGINEER
             </Typography>
             <Grid
               container
@@ -176,8 +188,11 @@ function About() {
               image="https://lineemen.sirv.com/Images/jimmy.jpeg"
               title="Jimmy Ngo"
             />
-            <Typography className={classes.teammateName} variant="h6">
+            <Typography className={classes.teammateName} variant="h5">
               Jimmy Ngo
+            </Typography>
+            <Typography className={classes.teammateTitle} variant="h6">
+              SOFTWARE ENGINEER
             </Typography>
             <Grid
               container
